@@ -7,6 +7,10 @@ class Restaurant
     @dishes = []
   end
 
+  def closing_time(time)
+    close_time = opening_time.to_i + time
+    return close_time.to_s + ":00"
+  end
 
 
-end               # => nil
+end
