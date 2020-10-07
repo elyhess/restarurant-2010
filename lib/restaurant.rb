@@ -21,7 +21,7 @@ class Restaurant
     if @opening_time.to_i < 12
       @open_for_lunch = true
     else
-      false
+      @open_for_lunch = false
     end
   end
 
