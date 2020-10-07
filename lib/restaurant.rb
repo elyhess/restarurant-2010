@@ -5,6 +5,7 @@ class Restaurant
     @opening_time = opening_time
     @name = name
     @dishes = []
+    @open_for_lunch = true
   end
 
   def closing_time(time)
@@ -14,6 +15,10 @@ class Restaurant
 
   def add_dish(dish)
     @dishes << dish
+  end
+
+  def open_for_lunch?
+    @open_for_lunch
   end
 
 
