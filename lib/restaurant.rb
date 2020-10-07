@@ -18,8 +18,11 @@ class Restaurant
   end
 
   def open_for_lunch?
-    @open_for_lunch
+    if @opening_time.to_i < 12
+      @open_for_lunch = true
+    else
+      false
+    end
   end
-
 
 end
