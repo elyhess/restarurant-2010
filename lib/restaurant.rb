@@ -33,4 +33,13 @@ class Restaurant
     return menu_items
   end
 
+  def announce_closing_time(time)
+    announce_time = opening_time.to_i + time
+    if announce_time > 12
+      "#{name} will be closing at #{announce_time - 12}:00PM"
+    else
+      "#{name} will be closing at #{announce_time}:00AM"
+    end
+  end
+
 end
