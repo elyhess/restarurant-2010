@@ -5,7 +5,6 @@ class Restaurant
     @opening_time = opening_time
     @name = name
     @dishes = []
-    @open_for_lunch = true
   end
 
   def closing_time(time)
@@ -18,11 +17,7 @@ class Restaurant
   end
 
   def open_for_lunch?
-    if @opening_time.to_i < 12
-      @open_for_lunch = true
-    else
-      @open_for_lunch = false
-    end
+    @opening_time.to_i < 12 == true
   end
 
   def menu_dish_names
@@ -30,7 +25,7 @@ class Restaurant
     @dishes.each do |dish|
       menu_items << dish.upcase
     end
-    return menu_items
+    menu_items
   end
 
   def announce_closing_time(time)
@@ -41,5 +36,4 @@ class Restaurant
       "#{name} will be closing at #{announce_time}:00AM"
     end
   end
-
 end
